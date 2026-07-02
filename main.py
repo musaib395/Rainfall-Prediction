@@ -3,7 +3,6 @@ import pandas as pd
 import pickle
 import os
 
-# Get correct folder path
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(BASE_DIR, "rainfall in india 1901-2015.csv")
 
@@ -51,4 +50,4 @@ model_path = os.path.join(BASE_DIR, "model.pkl")
 with open(model_path, "wb") as f:
     pickle.dump((model, mapping), f)
 
-print("✅ Model with state created successfully")
+print(" Model with state created successfully")
