@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #89f7fe, #66a6ff);
+            text-align: center;
+            padding: 50px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0px 0px 10px gray;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🌧 Prediction Result</h2>
+
+    <p><b>State:</b> {{ State }}</p>
+    <p><b>Year:</b> {{ Year }}</p>
+    <p><b>Month:</b> {{ Month }}</p>
+    <h3>Rainfall: {{ result }} mm</h3>
+
+    <a href="/">⬅ Go Back</a>
+</div>
+
+</body>
+</html>
