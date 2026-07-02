@@ -24,17 +24,17 @@ def home():
             month = int(request.form["Month"])
             state = request.form["State"]
 
-            # 🚫 Input Validation
+            #  Input Validation
             if year < 1901:
                 return "❌ Year must be >= 1901"
 
             if month < 1 or month > 12:
                 return "❌ Month must be between 1 and 12"
 
-            # 🔥 Convert state to numeric code
+            #  Convert state to numeric code
             state_code = mapping[mapping['SUBDIVISION'] == state]['State_Code'].values[0]
 
-            # 🔥 Predict rainfall
+            #  Predict rainfall
             prediction = model.predict([[state_code, year, month]])[0]
             prediction = round(prediction, 2)
 
